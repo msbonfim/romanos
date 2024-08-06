@@ -14,7 +14,7 @@ class RomanConverter {
     
     public function arabicToRoman(int $num): string {
         if ($num <= 0 || $num > 3999) {
-            throw new InvalidArgumentException('Number must be between 1 and 3999');
+            throw new InvalidArgumentException('O número precisa estar entre 0 e 3999');
         }
         
         $roman_num = '';
@@ -35,7 +35,7 @@ class RomanConverter {
         for ($i = $length - 1; $i >= 0; $i--) {
             $char = $roman[$i];
             if (!isset($this->numerals[$char])) {
-                throw new InvalidArgumentException('Invalid Roman numeral');
+                throw new InvalidArgumentException('Número romano inválido');
             }
             $value = $this->numerals[$char];
             
